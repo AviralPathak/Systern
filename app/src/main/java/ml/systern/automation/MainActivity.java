@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -15,28 +16,33 @@ import org.eclipse.paho.client.mqttv3.IMqttToken;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.w3c.dom.Text;
+
 import java.io.UnsupportedEncodingException;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button button1;
     private Button button2;
+    private EditText editText1;
     private Switch switch2;
     private Switch switch3;
     private Switch switch4;
+    private MqttAndroidClient client;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button1 = (Button) findViewById(R.id.button1);
-        String clientId = MqttClient.generateClientId();
-        final MqttAndroidClient client =
-                new MqttAndroidClient(MainActivity.this, "tcp://systern.ml:1883",
-                        clientId);
+        editText1 = (EditText)findViewById(R.id.editText1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
+                    String server= editText1.getText().toString();
+                    String clientId = MqttClient.generateClientId();
+                    client = new MqttAndroidClient(MainActivity.this, server,
+                            clientId);
                     IMqttToken token = client.connect();
                     token.setActionCallback(new IMqttActionListener() {
                         @Override
