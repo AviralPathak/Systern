@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Not Connected", Toast.LENGTH_SHORT).show();
                         }
                     });
-                } catch (MqttException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
                         }
                     });
-                } catch (MqttException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                         encodedPayload = payload.getBytes("UTF-8");
                         MqttMessage message = new MqttMessage(encodedPayload);
                         client.publish(topic, message);
-                    } catch (UnsupportedEncodingException | MqttException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         encodedPayload = payload.getBytes("UTF-8");
                         MqttMessage message = new MqttMessage(encodedPayload);
                         client.publish(topic, message);
-                    } catch (UnsupportedEncodingException | MqttException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                         encodedPayload = payload.getBytes("UTF-8");
                         MqttMessage message = new MqttMessage(encodedPayload);
                         client.publish(topic, message);
-                    } catch (UnsupportedEncodingException | MqttException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                         encodedPayload = payload.getBytes("UTF-8");
                         MqttMessage message = new MqttMessage(encodedPayload);
                         client.publish(topic, message);
-                    } catch (UnsupportedEncodingException | MqttException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                         encodedPayload = payload.getBytes("UTF-8");
                         MqttMessage message = new MqttMessage(encodedPayload);
                         client.publish(topic, message);
-                    } catch (UnsupportedEncodingException | MqttException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                         encodedPayload = payload.getBytes("UTF-8");
                         MqttMessage message = new MqttMessage(encodedPayload);
                         client.publish(topic, message);
-                    } catch (UnsupportedEncodingException | MqttException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
