@@ -62,7 +62,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="46" />
+                                                <entry key="scalingPercent" value="51" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -97,10 +97,8 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="000000" />
-                                      <entry key="foregroundAssetType" value="TEXT" />
-                                      <entry key="foregroundImage" value="C:\Users\DevAbhi\Desktop\Asset 1.svg" />
+                                      <entry key="foregroundImage" value="C:\Users\DevAbhi\Desktop\Asset 3.svg" />
                                       <entry key="previewDensity" value="MEDIUM" />
-                                      <entry key="showGrid" value="true" />
                                     </map>
                                   </option>
                                 </PersistentState>
